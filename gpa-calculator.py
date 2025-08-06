@@ -209,7 +209,7 @@ for i in range(1,len(data)):
 	
 	# Calculate and assign gpa
 	gpa = total_gp / total_units[i]
-	gpa = round(gpa, 3)
+	gpa = round(gpa, 5)
 	data[i][2] = gpa
 
 	# Assign honors status
