@@ -1,6 +1,9 @@
-# Note 8/11/25 - Modifying to work in Google Colab:
-# Changed rounding from 3 decimals to 5
-# Used Colab's .download() function to download alphabetical and hightolow files
+'''
+Note 8/11/25 - Modifying to work in Google Colab:
+- Changed rounding from 3 decimals to 5
+- Replaced file uploading/downloading methods with Colab's .upload() and .download() functions
+- Fixed the case where 150, 198, or 199 has a non-letter grade code
+'''
 
 # GETTING THE DATA FILE ======================================================
 
@@ -163,6 +166,7 @@ for i in range(1,len(data)):
 		for code in codes_to_check:
 			if data_item == code:
 				data_item = ''
+				data[i][j] = data_item
 				break
 		
 		# Now, translate all letter grades to grade points
@@ -176,6 +180,7 @@ for i in range(1,len(data)):
 			else:
 				if data[i][j] != '':
 					while True:
+						print("Class: " + str(data[0][j]) + " and Code: " + str(data[i][j]))
 						num_units = input("For " + data[i][1] + ", how many units did they take " + data[0][j] + " for? ")
 						try:
 							num_units = float(num_units)
