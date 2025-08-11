@@ -3,6 +3,10 @@ Note 8/11/25 - Modifying to work in Google Colab:
 - Changed rounding from 3 decimals to 5
 - Replaced file uploading/downloading methods with Colab's .upload() and .download() functions
 - Fixed the case where 150, 198, or 199 has a non-letter grade code
+
+THINGS I STILL NEED TO FIX:
+- When a student has retaken a course more than once, or when they retook a course and earned NP or U
+- Modify so that units for 150, 198, 199 are encoded in the spreadsheet rather than asked for as input in the code
 '''
 
 # GETTING THE DATA FILE ======================================================
