@@ -1,3 +1,7 @@
+# Note 8/11/25 - Modifying to work in Google Colab:
+# Changed rounding from 3 decimals to 5
+# Used Colab's .download() function to download alphabetical and hightolow files
+
 # GPA CALCULATION ===============================================
 
 # So far, we have the number of grade points earned in each class, and the total number of units. We simply have to sum the grade points earned, and then divide this by the units, and we have the GPA!
